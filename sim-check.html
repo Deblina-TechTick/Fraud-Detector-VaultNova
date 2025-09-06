@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIM Swap Detection</title>
+  <link rel="stylesheet" href="simotp.css"/>
+</head>
+<body>
+  <header class="header">
+    <h1>SIM Swap / Dual SIM Detection</h1>
+    <p class="quote">📡 Secure Login: Preventing SIM Cloning & Location Spoofing</p>
+    <nav class="top-links">
+      <a href="index.html">🏠 Home</a>
+      <a href="admin.html">🛠️ Admin Panel</a>
+      <a href="sim-check.html" class="active">📲 SIM Check</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card glass-effect">
+      <h2>SIM & Device Check</h2>
+      <button onclick="detectSIM()">🔍 Detect SIM Info</button>
+      <div id="sim-result" class="result-box"></div>
+    </section>
+
+    <section class="card glass-effect">
+      <h2>🔐 OTP Verification</h2>
+      <input type="text" id="otp-input" placeholder="Enter OTP"/>
+      <button onclick="verifyOTP()">Verify OTP</button>
+      <p id="otp-status"></p>
+    </section>
+
+    <section class="card glass-effect">
+      <h2>📍 Location Consistency</h2>
+      <button onclick="checkLocation()">Check Location</button>
+      <div id="location-status"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SafeBank SecureTech</p>
+  </footer>
+
+  <script src="simotp.js"></script>
+</body>
+</html>

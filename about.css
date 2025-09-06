@@ -1,0 +1,119 @@
+/* Base body style */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0f0f0f;
+  color: #e0e0e0;
+  transition: background-color 0.3s, color 0.3s;
+  background-image: radial-gradient(circle at top left, #00ffc3 0%, #0f0f0f 80%);
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #121212;
+  box-shadow: 0 0 20px #00ffc3;
+  border-bottom: 1px solid #00ffc3;
+}
+
+/* Left nav title */
+.nav-left h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #00ffc3;
+  text-shadow: 0 0 8px #00ffc3, 0 0 20px #00ffc3;
+}
+
+/* Right nav links */
+.nav-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #00ffc3;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-right a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #00ffc3;
+}
+
+/* Toggle button */
+.toggle-btn {
+  margin-left: 20px;
+  padding: 10px 15px;
+  background-color: #00ffc3;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffc3, 0 0 20px #00ffc3;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #00e6b8;
+  box-shadow: 0 0 20px #00ffc3, 0 0 30px #00ffc3;
+}
+
+/* About section styling */
+.about-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(18, 18, 18, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 0 25px #00ffc3;
+  border: 1px solid #00ffc3;
+  animation: neon-glow 2s infinite alternate;
+}
+
+.about-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00ffc3;
+  text-shadow: 0 0 10px #00ffc3, 0 0 20px #00ffc3;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #c0fefc;
+}
+
+/* Dark Mode specific overrides */
+body.dark-mode {
+  background-color: #000000;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+  background-color: #0a0a0a;
+}
+
+body.dark-mode .about-section {
+  background-color: #121212;
+  box-shadow: 0 0 25px #00ffc3;
+}
+
+body.dark-mode .nav-right a,
+body.dark-mode .nav-left h2 {
+  color: #00ffc3;
+}
+
+/* Neon pulse animation */
+@keyframes neon-glow {
+  from {
+    box-shadow: 0 0 10px #00ffc3, 0 0 20px #00ffc3;
+  }
+  to {
+    box-shadow: 0 0 25px #00ffc3, 0 0 50px #00ffc3;
+  }
+}
+
+/* Optional: Orbitron font import for sci-fi effect */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');

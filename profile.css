@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(ellipse at center, #0f0f1c 0%, #000 100%);
+  color: #00ffe1;
+  overflow-x: hidden;
+}
+
+.header {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #00ffe1;
+  box-shadow: 0 0 15px #00ffe1;
+}
+
+.header h1 {
+  color: #00ffe1;
+  text-shadow: 0 0 10px #00ffe1;
+}
+
+nav a {
+  color: #00ffe1;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #00ffe1;
+}
+
+.main-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.feature-container h2 {
+  color: #00ffe1;
+  text-shadow: 0 0 10px #00ffe1;
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  width: 60%;
+  padding: 12px;
+  margin: 20px auto;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(0, 255, 225, 0.1);
+  color: #00ffe1;
+  outline: none;
+  box-shadow: 0 0 10px #00ffe1;
+  display: block;
+}
+
+.search-input::placeholder {
+  color: #00ffe180;
+}
+
+.log-table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+  background: rgba(0, 255, 225, 0.05);
+  box-shadow: 0 0 15px #00ffe1;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.log-table th, .log-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #00ffe1;
+}
+
+.log-table th {
+  background-color: rgba(0, 255, 225, 0.15);
+  text-shadow: 0 0 5px #00ffe1;
+}
+
+.log-table tr:hover {
+  background-color: rgba(0, 255, 225, 0.1);
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #00ffe1;
+  color: #888;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.suspicious-ip {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff4d4d;
+  animation: pulseAlert 1.5s infinite;
+}
+
+.suspicious-ip::after {
+  content: " 🚨";
+  font-size: 1.2rem;
+}
+
+@keyframes pulseAlert {
+  0% { box-shadow: 0 0 5px red; }
+  50% { box-shadow: 0 0 15px red; }
+  100% { box-shadow: 0 0 5px red; }
+}

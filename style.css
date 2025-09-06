@@ -1,0 +1,358 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+  color: #eee;
+  transition: background-color 0.3s, color 0.3s;
+  background-attachment: fixed;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: linear-gradient(to bottom right, #000000, #0c0c0c);
+  color: #eee;
+}
+
+/* Glassy Neon Nav Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #00ffe7;
+  text-shadow: 0 0 5px #00ffe7;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-right a:hover {
+  color: #00ffe7;
+  text-shadow: 0 0 8px #00ffe7;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  margin-left: 20px;
+  padding: 8px 14px;
+  background: transparent;
+  border: 2px solid #00ffe7;
+  color: #00ffe7;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #00ffe7;
+  color: #000;
+  box-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+}
+
+/* Dashboard Title */
+.dashboard h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 40px;
+  color: #00ffe7;
+  text-shadow: 0 0 10px #00ffe7;
+}
+
+/* Quote Section */
+.quote {
+  text-align: center;
+  margin: 25px auto;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #ccc;
+  max-width: 600px;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 5px solid #00ffe7;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 12px rgba(0, 255, 231, 0.2);
+}
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+/* Neon Glass Cards */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-decoration: none;
+  color: #ccc;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
+  box-shadow: 0 0 8px rgba(0, 255, 231, 0.1);
+}
+
+.card i {
+  margin-right: 10px;
+  font-size: 1.3rem;
+  color: #00ffe7;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 0 15px #00ffe7, 0 0 30px #00ffe7;
+  color: #00ffe7;
+}
+
+/* Dark Mode Enhancements */
+body.dark-mode .card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ccc;
+}
+
+body.dark-mode .card:hover {
+  color: #00ffe7;
+}
+
+body.dark-mode .quote {
+  color: #eee;
+  background: rgba(255, 255, 255, 0.05);
+  border-left-color: #00ffe7;
+}
+
+body.dark-mode .toggle-btn {
+  border-color: #00ffe7;
+  color: #00ffe7;
+}
+
+body.dark-mode .toggle-btn:hover {
+  background: #00ffe7;
+  color: #000;
+}
+/* Base Reset and Font */
+body {
+  margin: 0;
+  font-family: 'Orbitron', 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #0a0a0a, #1b1b1b);
+  color: #eee;
+  background-attachment: fixed;
+  transition: 0.3s;
+  overflow-x: hidden;
+}
+
+/* Neon Glitch Text */
+.glitch {
+  position: relative;
+  color: #00ffe7;
+  font-weight: bold;
+  text-shadow: 0 0 3px #00ffe7, 0 0 7px #00ffe7;
+}
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+}
+.glitch::before {
+  left: 2px;
+  color: #f0f;
+  animation: glitch 1s infinite linear alternate-reverse;
+}
+.glitch::after {
+  left: -2px;
+  color: #0ff;
+  animation: glitch 0.8s infinite linear alternate-reverse;
+}
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 1px); }
+  80% { transform: translate(-1px, -1px); }
+  100% { transform: translate(1px, 2px); }
+}
+
+/* Navbar Glass */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0, 255, 231, 0.05);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #00ffe777;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Nav Text */
+.nav-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.nav-right a:hover {
+  color: #00ffe7;
+  text-shadow: 0 0 10px #00ffe7;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  margin-left: 20px;
+  padding: 8px 14px;
+  background: transparent;
+  border: 2px solid #00ffe7;
+  color: #00ffe7;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.toggle-btn:hover {
+  background-color: #00ffe7;
+  color: #000;
+  box-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+}
+
+/* Title Section */
+.dashboard h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-top: 40px;
+  color: #00ffe7;
+  text-shadow: 0 0 15px #00ffe7;
+}
+
+/* Quote Box */
+.quote {
+  text-align: center;
+  margin: 25px auto;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #ddd;
+  max-width: 600px;
+  padding: 18px 24px;
+  background: rgba(0, 255, 231, 0.06);
+  border-left: 5px solid #00ffe7;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0, 255, 231, 0.3);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  justify-items: center;
+}
+
+.card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  color: #0ff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 15px #0ff;
+  transition: all 0.3s ease-in-out;
+  width: 200px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #0ff;
+}
+
+.card i {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+ 
+
+/* Optional Floating Animation */
+.card:hover {
+  animation: floatCard 1s ease-in-out infinite alternate;
+}
+@keyframes floatCard {
+  0% { transform: translateY(-8px); }
+  100% { transform: translateY(-12px); }
+}
+
+/* Dark Mode Enhancements */
+body.dark-mode {
+  background: linear-gradient(to bottom right, #000, #0b0b0b);
+  color: #eee;
+}
+body.dark-mode .quote {
+  background: rgba(255, 255, 255, 0.03);
+}
+body.dark-mode .card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.behavior-btn-container {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.behavior-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 18px;
+  color: #fff;
+  background: linear-gradient(135deg, #0f2027, #2c5364);
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.4s ease;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.behavior-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #1c1c1c, #555);
+  box-shadow: 0 0 12px #00f0ff, 0 0 24px #00f0ff;
+}

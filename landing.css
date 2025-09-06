@@ -1,0 +1,166 @@
+/* Font and Body */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffff;
+  background: url('backgroundimage.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Neon text glow */
+h1, h2, p, .admin-btn, .leave-btn, .member {
+  text-shadow: 0 0 8px #0ff, 0 0 16px #0ff, 0 0 32px #0ff;
+}
+
+/* Nav Buttons */
+.nav-buttons {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.admin-btn, .leave-btn {
+  padding: 12px 24px;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid #0ff;
+  color: #0ff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.admin-btn:hover, .leave-btn:hover {
+  background: #0ff;
+  color: #000;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+/* Hero Message */
+.core-message {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);  /* Dark transparent background */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+  max-width: 80%;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+.core-message h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #0ff;
+}
+
+.core-message p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #e0f7ff;
+  text-shadow: 0 0 4px #0ff;
+}
+
+
+/* Scroll Down Indicator */
+.scroll-indicator {
+  font-size: 2em;
+  margin-top: 30px;
+  animation: bounce 2s infinite;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
+}
+
+/* Team Section */
+.team-section {
+  margin-top: 100vh;
+  padding: 80px 20px;
+  background: rgba(0, 0, 0, 0.85);
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.member {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid #0ff;
+  padding: 20px;
+  border-radius: 16px;
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #0ff;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #0ff 0%, #000 60%);
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s infinite;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.85em;
+  padding: 6px;
+  text-align: center;
+  overflow-wrap: break-word;
+  line-height: 1.1;
+  text-shadow: 0 0 4px #0ff;
+}
+
+
+/* Scroll Animation Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #0ff; }
+  50% { box-shadow: 0 0 30px #0ff, 0 0 60px #0ff; }
+  100% { box-shadow: 0 0 10px #0ff; }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}

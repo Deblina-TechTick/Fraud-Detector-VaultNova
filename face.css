@@ -1,0 +1,77 @@
+body {
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  color: #e0f7fa;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-container {
+  background: rgba(30, 30, 30, 0.7);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2), 0 0 50px rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  width: 400px;
+}
+
+.title {
+  color: #00e5ff;
+  text-shadow: 0 0 8px #00e5ff;
+  margin-bottom: 20px;
+}
+
+.video-frame {
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Wrap for extra visibility */
+.button-glow-wrap {
+  margin-top: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  padding: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1), 0 0 25px rgba(0, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+}
+
+/* FULLY FIXED BUTTON */
+.verify-btn {
+  background-color: #00f7ff !important;
+  color: #000 !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 10;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  line-height: 1.2;
+}
+
+/* Hover effect */
+.verify-btn:hover {
+  background-color: #1effff;
+  box-shadow: 0 0 25px #1effff, 0 0 40px #1effff;
+  transform: scale(1.05);
+}
+
+/* Result text */
+.result-msg {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #81d4fa;
+  text-shadow: 0 0 5px #00bcd4;
+}

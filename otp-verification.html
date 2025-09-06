@@ -1,0 +1,41 @@
+<!-- Save this as otp.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTP Verification</title>
+  <link rel="stylesheet" href="otp.css" />
+</head>
+<body>
+  <header>
+    <h1>VaultNova</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="admin.html">Admin Panel</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="feature-container">
+      <h2>OTP Verification</h2>
+      <p>Enter your mobile number to receive OTP and verify identity.</p>
+      <form id="otp-form">
+        <input type="text" id="mobile" placeholder="Enter Mobile Number" required />
+        <button type="submit">Send OTP</button>
+      </form>
+      <div id="otp-section" style="display:none;">
+        <input type="text" id="otp" placeholder="Enter OTP" />
+        <button id="verify-btn">Verify OTP</button>
+      </div>
+      <p id="otp-message"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SecureBank Hackathon Team</p>
+  </footer>
+
+  <script src="otp.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Landing Page</title>
+  <link rel="stylesheet" href="landing.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hero-section">
+    <div class="nav-buttons">
+      <a href="index.html" class="admin-btn">Admin Dashboard</a>
+      <a href="https://www.google.com" class="leave-btn">Leave Site</a>
+    </div>
+
+    <div class="core-message">
+  <h1>Welcome to CyberSecure VaultNova</h1>
+  <p>
+    Step into the future of secure authentication. <br>
+    We build advanced, AI-integrated cybersecurity solutions to protect your digital presence.<br>
+    Empowered by real-time biometrics, location intelligence, and cryptographic safeguards.
+  </p>
+  <div class="scroll-indicator">▼</div>
+</div>
+
+
+  <section class="team-section">
+    <h2 class="reveal">Meet Our Team</h2>
+    <div class="team-members">
+      <div class="member reveal">
+        <div class="circle">
+          <img src="images/avatar1.png" alt="Anuska" />
+        </div>
+        <h3>Anuska Dutta</h3>
+        <p>Frontend Developer</p>
+      </div>
+      <div class="member reveal">
+        <div class="circle">
+          <img src="images/avatar2.png" alt="Deblina" />
+        </div>
+        <h3>Deblina Samaddar</h3>
+        <p>UI Designer & Frontend Developer</p>
+      </div>
+      <div class="member reveal">
+        <div class="circle">
+          <img src="images/avatar3.png" alt="Unnita" />
+        </div>
+        <h3>Unnita Karmakar</h3>
+        <p>Backend Developer</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Scroll reveal logic
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+          reveals[i].classList.add("active");
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIM Swap Detection</title>
+  <link rel="stylesheet" href="sim-swap.css" />
+</head>
+<body class="dark-mode">
+  <header class="header">
+    <h1>🔐 VaultNova</h1>
+    <nav class="navbar">
+      <a href="index.html">🏠 Home</a>
+      <a href="admin.html">🛠️ Admin Panel</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="feature-container">
+      <h2>📲 SIM Swap Detection</h2>
+      <button class="detect-btn" onclick="detectSimSwap()">🔍 Run SIM Swap Check</button>
+      <div id="sim-swap-status" class="status-box"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SecureBank Hackathon Team</p>
+  </footer>
+
+  <!-- Sounds -->
+  <audio id="alert-sound" src="assets/alert.mp3" preload="auto"></audio>
+  <audio id="success-sound" src="assets/success.mp3" preload="auto"></audio>
+
+  <script src="sim-swap.js"></script>
+</body>
+</html>

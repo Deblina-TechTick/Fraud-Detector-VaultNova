@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Access Logs</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>🔐 VaultNova</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="admin.html">Admin Panel</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="feature-container">
+      <h2>👤 Profile Access Logs</h2>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by user, time, or IP..."
+        class="search-input"
+      />
+
+      <table class="log-table">
+        <thead>
+          <tr><th>User</th><th>Timestamp</th><th>IP Address</th></tr>
+        </thead>
+        <tbody id="logs-table">
+          <!-- Logs will be inserted dynamically -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 SecureBank Hackathon Team</p>
+  </footer>
+
+  <script src="profile.js"></script>
+</body>
+</html>

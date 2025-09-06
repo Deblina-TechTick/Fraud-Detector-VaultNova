@@ -1,0 +1,87 @@
+/* Save this as css/otp.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #121212, #1e1e1e);
+  color: white;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #00ffff;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #00ffff;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  padding: 20px;
+}
+
+.feature-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 30px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  width: 100%;
+  max-width: 400px;
+}
+
+input[type="text"] {
+  padding: 12px;
+  width: 90%;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #2a2a2a;
+  color: white;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  background-color: #00ffff;
+  color: #121212;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0ff;
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #999;
+}

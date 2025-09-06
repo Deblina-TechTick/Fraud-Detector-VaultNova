@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Behavior Tracker</title>
+  <link rel="stylesheet" href="track.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>User Behavior Tracking</h1>
+    
+    <input type="text" id="username" placeholder="Type your username" />
+
+    <button onclick="showBehavior()">Show Behavior Pattern</button>
+
+    <div id="output">
+      <h3>Typing Pattern</h3>
+      <p id="typing"></p>
+
+      <h3>Mouse Movement Coordinates</h3>
+      <pre id="mouse"></pre>
+    </div>
+  </div>
+
+  <script src="track.js"></script>
+</body>
+</html>

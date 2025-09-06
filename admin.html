@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Fraud Detection Admin Panel</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔵 AI Fraud Detection Admin Panel</h1>
+    <button id="toggle-theme">Toggle Theme</button>
+
+    <div class="stats">
+      <div class="stat-box">
+        <h3>Total Users</h3>
+        <p>1024</p>
+      </div>
+      <div class="stat-box">
+        <h3>Fraud Detected</h3>
+        <p>147</p>
+      </div>
+      <div class="stat-box">
+        <h3>System Accuracy</h3>
+        <p>98.7%</p>
+      </div>
+    </div>
+
+    <h2>🔍 AI Detection Rule Status</h2>
+    <div class="card">
+      <p>✅ <strong>AI Model:</strong> Anomaly detected in transaction pattern.</p>
+      <p>• <strong>Feature:</strong> IP Geolocation mismatch</p>
+      <p>• <strong>Confidence:</strong> 92.5%</p>
+      <p>• <strong>Suggested Action:</strong> Flag user for manual review.</p>
+      <button id="ai-check-btn" class="glass-button">Run AI Check</button>
+    </div>
+
+    <h2>📊 AI Transaction & Detection Logs</h2>
+    <div id="fraud-logs" class="log-container card">
+      <!-- JS will insert dynamic fraud detection logs here -->
+    </div>
+
+    <h2>🧠 Adaptive AI Learning Status</h2>
+    <div class="card">
+      <p>🟣 <strong>Auto-Learn Model Update:</strong> Enabled</p>
+      <p>🔁 <strong>Retraining Frequency:</strong> Weekly</p>
+      <p>📅 <strong>Last Update:</strong> 3 days ago</p>
+      <p>⚠️ <strong>Risk Pattern Evolution:</strong> New fraud pattern detected: SIM bounce-back method</p>
+    </div>
+
+    <h2>📂 Access Log</h2>
+    <div id="access-logs" class="log-container card">
+      <!-- JS will insert dynamic access logs here -->
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

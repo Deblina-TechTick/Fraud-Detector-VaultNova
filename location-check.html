@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Location Rule Checker</title>
+  <link rel="stylesheet" href="loc.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <h1>VaultNova</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="admin.html">Admin Panel</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="feature-container">
+      <h2>Location Rule Checker</h2>
+      <p>Check if access is allowed from your current location.</p>
+      <button onclick="checkLocationRules()">Check Location</button>
+      <div id="location-result"></div>
+      <div id="map" style="height: 300px; margin-top: 20px;"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SecureBank Hackathon Team</p>
+  </footer>
+
+  <!-- Alert Sounds -->
+  <audio id="success-sound" src="sounds/success.mp3" preload="auto"></audio>
+  <audio id="error-sound" src="sounds/error.mp3" preload="auto"></audio>
+
+  <!-- Leaflet.js CDN -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="loc.js"></script>
+</body>
+</html>
